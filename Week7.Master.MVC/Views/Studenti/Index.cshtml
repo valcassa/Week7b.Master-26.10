@@ -1,0 +1,27 @@
+﻿@model List<StudenteViewModel>
+
+<h1>Ecco la lista degli studenti</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Cognome</th>
+            @*<th scope="col">Descrizione</th>*@
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nome</td>
+                <td>@item.Cognome</td>
+                @*<td>@item.Descrizione</td>*@
+                <td>
+                    <a asp-controller="Studenti" asp-action="Details" asp-route-id="@item.IdStudente" class="btn btn-secondary">Dettagli studente</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

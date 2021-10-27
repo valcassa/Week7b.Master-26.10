@@ -1,0 +1,24 @@
+﻿
+<h1>Lista delle Lezioni</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id Lezione</th>
+            <th scope="col">Data e ora</th>
+            <th scope="col">Durata</th>
+            <th scope="col">Aula</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.IdLezione</td>
+            <td>@item.DataInizio</td>
+            <td>@item.Durata</td>
+            <td>@item.Aula</td>
+        </tr>
+        }
+    </tbody>
+</table>
